@@ -1,0 +1,496 @@
+//colores
+
+$true-blue:#0466C8;
+$drussian-blue:#0353A4;
+$dark-cornflower-blue:#023E7D;
+$oxford-blue:#002855;
+$oxford-dark-blue:#001845;
+$oxford-darker-blue:#001233;
+$ultra-darker-blue:#000d26;
+$grey:#5C677D;
+$white-grey:#7D8597;
+$whitr-grey: #eeeeee;
+$white:#ffffffab;
+$background:#edededb6;
+//resets
+*{
+    margin: 0;
+    padding: 0;
+}
+h2,h3,p,i{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    color: $whitr-grey;
+}
+//body
+body{
+    margin-top: 10%;
+    background-color: $background;
+}
+//mixings
+@mixin list-nav {
+    width: 35%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+@mixin li-style {
+    color: $oxford-darker-blue;
+    font-size: 1.5em;
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+}
+@mixin icon {
+    color: #000d26;
+    margin:0px 0px 0px 10px;
+}
+//font
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+//header
+nav{
+    display: flex;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: $white;
+
+    .icon-mobile{
+        @include icon;
+        display: none;
+    }
+
+    h1{
+        font-family: 'Bebas Neue', cursive;
+        margin: 0;
+        font-size: 3.5em;
+        a{
+            color: $oxford-darker-blue;
+            text-decoration: none;
+            &:hover{
+                color: $oxford-darker-blue;
+            }
+        }
+    }
+
+    ul{
+         @include list-nav;
+            
+        li{
+            @include li-style;
+            
+            .icon{
+                @include icon; 
+            }
+
+            a{
+                color: $oxford-darker-blue;
+                text-decoration: none;
+            }
+            &:hover .icon{
+    
+                color:$dark-cornflower-blue;
+            }
+
+        }
+
+        .dropdown-list{
+            position: relative;
+            
+            &:hover ul {
+                display: block;
+                animation: aparicion-menu 0.3s ;
+                @keyframes aparicion-menu {
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 100%;
+                    }
+                }
+            }
+                
+            ul{
+                position: absolute;
+                display: none;
+                left: 0px; 
+                top: 35px;
+                background-color: $dark-cornflower-blue;
+                width: 200px;
+                padding: 10px;
+                a{
+                    color:$whitr-grey;
+                    font-weight: 300;
+                    text-decoration: none;
+                    margin: 10px;
+                    font-size: 0.5em;
+                    &:hover{
+                        color: $white-grey;
+                    }
+                }
+            } 
+        }
+    }
+
+
+}
+//main
+main{
+         
+    .carousel {
+        img{
+            width: 90%;
+            object-fit: cover;
+            max-height: 500px ;
+            margin: auto;
+        }
+    }
+    section{
+        margin: 6%;
+        h2{
+            margin: 0 0 2% 0;
+            font-size: 3em;
+            text-align: center;
+            color: $oxford-darker-blue;
+        }
+
+        .categories-shop{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            article{
+                position: relative;
+                width: 45%;
+                cursor: pointer;
+                &:hover img{
+                    filter: saturate(130%);
+                    animation: expand-image 2s;
+                }
+
+                &:hover{
+                    p{
+                        display: block;
+                        animation: aparition-text .7s;
+                        @keyframes aparition-text {
+                            0%{
+                                opacity: 0%;
+                            }
+                            100%{
+                                opacity: 100%;
+                            }
+                        }
+                    }
+                }
+            
+                p{
+                    position: absolute;
+                    display: none;
+                    background-color: #023d7de3;
+                    padding: 5px;
+                    text-align: center;
+                    width: 100%;
+                    bottom: 50px;
+                    font-size: 1.5em;
+                    font-weight: 500;
+                    color: $whitr-grey;
+                }
+                img{
+                    width: 100%;
+                    height: 360px;
+                    object-fit: cover;
+                    filter: saturate(30%);
+                
+                }
+            }
+        }
+    }
+}
+
+
+//footer
+footer{
+    width: 96%;
+    margin: 10% auto auto auto;
+    background-color: $oxford-blue;
+    h2{
+
+        text-align: center;
+    }
+    .footer-flex{
+        display: flex;
+        padding: 1%;
+        justify-content: space-between;
+        .contact{
+            width: 31%;
+            border-right: 1px solid $oxford-dark-blue;
+   
+           
+            .icons{
+                display: flex;
+                justify-content: center;
+            }
+            i{
+                font-size: 2em;
+                margin: 1.2%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+
+        }
+
+        .encuentranos{
+            padding: 0 1%;
+            width: 31%;
+            
+        }
+        .llamanos{
+            width: 31%;
+            border-left: 1px solid $oxford-dark-blue;
+            padding: 0 1%;
+        }
+
+    }
+    .copyright{
+        p{
+            text-align: center;
+            font-style: italic;
+        }
+    }
+    
+}
+
+//mediaquerys
+
+@media (max-width: 480px) {
+    //body
+    body{
+        margin-top: 25%;
+    }
+    //navbar
+    header{
+        nav{
+            align-items: center;
+            ul{
+                display: none;
+
+            }
+            .icon-mobile{
+                position: relative;
+                display: block;
+                font-size: 2em;
+                margin: 0 10px;
+                &:hover{
+                    .responsive-menu-right{
+                        top: 50px;
+                        left: -90vw;
+                    }
+                    .responsive-menu-left{
+                        top: 50px;
+                        left: -4vw;
+                    }
+                    .responsive-menu{
+                        width: 104vw;
+                        padding: 10px;
+                        background-color: $dark-cornflower-blue;
+                        position: absolute;
+                        display: block;
+                        animation: aparicion-menu 0.3s ;
+
+                        @keyframes aparicion-menu {
+                        0%{
+                            opacity: 0;
+                            }
+                            
+                        100%{
+                            opacity: 100%;
+                            }
+
+                        }
+                        
+                        li{
+                            color: $whitr-grey;
+                            margin: 10px 0;
+                            font-size: 0.7em;
+                            a{
+                                color: $whitr-grey;
+                            }
+                        }
+                        .dropdown-list{
+                            ul{
+                                top: -10px;
+                                left: -5px;
+                                background-color: $oxford-blue;
+                            }
+                            li{
+                                font-size: 1.4em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    //main{
+    main{
+        section{
+            .carousel{
+                img{
+                    height: 130px;
+                }
+            }
+            .categories-shop{
+                flex-direction: column;
+                article{
+                    margin-top: 20px;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                        height: 230px;
+                    }
+                }
+    
+            }
+        }
+
+    }
+
+    //footer
+    footer{
+        .footer-flex{
+            flex-direction: column;
+            align-items: center;
+            .contact{
+                border: none;
+                width: 95%;
+                margin: 10px 0;
+            }
+            .encuentranos{
+                width: 95%;
+                margin: 10px 0;
+                border-top: 1px solid $oxford-dark-blue;
+            }
+            .llamanos{
+                width: 95%;
+                border-left: none;
+                border-top: 1px solid $oxford-dark-blue;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    //body
+    body{
+        margin-top: 12%;
+    }
+    //navbar
+    header{
+        nav{
+            align-items: center;
+            ul{
+                display: none;
+
+            }
+            .icon-mobile{
+                display: block;
+                font-size: 2em;
+                margin: 0 10px;
+            }
+        }
+
+    }
+    //main{
+    main{
+        section{
+            .carousel{
+                img{
+                    height: 220px;
+                }
+            }
+            .categories-shop{
+                flex-direction: column;
+                article{
+                    margin-top: 20px;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+    
+            }
+        }
+
+    }
+
+    //footer
+    footer{
+        .footer-flex{
+            flex-direction: column;
+            align-items: center;
+            .contact{
+                border: none;
+                width: 95%;
+                margin: 10px 0;
+            }
+            .encuentranos{
+                width: 95%;
+                margin: 10px 0;
+                border-top: 1px solid $oxford-dark-blue;
+            }
+            .llamanos{
+                width: 95%;
+                border-left: none;
+                border-top: 1px solid $oxford-dark-blue;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+//1280px
+@media (min-width: 769px) and (max-width: 1280px){
+    //navbar
+        nav{
+
+            h1{
+                font-size: 2em;
+            }
+            ul{
+                width: 40%;
+                li{
+                font-size: 1em;
+                }
+                .dropdown-list{
+                    a{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    //main
+    main{
+        section{
+            .carousel{
+                img{
+                    height: 330px;
+                }
+            }
+            .categories-shop{
+                article{
+                    img{
+                        height: 230px;
+                    }
+                }
+            }
+        }
+    }
+
+}

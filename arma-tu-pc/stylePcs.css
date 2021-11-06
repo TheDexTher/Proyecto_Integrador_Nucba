@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, p, i {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: lighter;
+  color: #eeeeee;
+}
+
+body {
+  margin-top: 10%;
+  background-color: #edededb6;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+  background-color: #ffffffab;
+}
+
+nav h1 {
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  font-size: 3.5em;
+}
+
+nav h1 a {
+  color: #001233;
+  text-decoration: none;
+}
+
+nav h1 a:hover {
+  color: #001233;
+}
+
+nav ul {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+nav ul li {
+  color: #001233;
+  font-size: 1.5em;
+  list-style: none;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+}
+
+nav ul li .icon {
+  color: #000d26;
+  margin: 0px 0px 0px 10px;
+}
+
+nav ul li a {
+  color: #001233;
+  text-decoration: none;
+}
+
+nav ul li:hover .icon {
+  color: #023E7D;
+}
+
+nav ul .dropdown-list {
+  position: relative;
+}
+
+nav ul .dropdown-list:hover ul {
+  display: block;
+  -webkit-animation: aparicion-menu 0.3s;
+          animation: aparicion-menu 0.3s;
+}
+
+@-webkit-keyframes aparicion-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes aparicion-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+nav ul .dropdown-list ul {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 35px;
+  background-color: #023E7D;
+  width: 200px;
+  padding: 10px;
+}
+
+nav ul .dropdown-list ul a {
+  color: #eeeeee;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 0.5em;
+}
+
+nav ul .dropdown-list ul a:hover {
+  color: #7D8597;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  width: 95%;
+}
+
+section article {
+  position: relative;
+  background-color: #ffffffab;
+  margin: 1%;
+  padding: 1%;
+  width: 30%;
+  border-radius: 5px;
+}
+
+section article .img-ofert {
+  position: absolute;
+  width: 70px;
+  height: auto;
+  top: -20px;
+  right: -20px;
+  -webkit-filter: hue-rotate(220deg);
+          filter: hue-rotate(220deg);
+}
+
+section article p {
+  color: #000d26;
+  font-weight: normal;
+  margin: 10px;
+}
+
+section article img {
+  width: 100%;
+  cursor: pointer;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section article button {
+  display: block;
+  margin: auto;
+  background-color: #002855;
+  border: none;
+  padding: 10px;
+  width: 170px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  color: #eeeeee;
+  font-weight: lighter;
+}
+
+section article button:hover {
+  -webkit-animation: hoverColor 1s;
+          animation: hoverColor 1s;
+}
+
+@-webkit-keyframes hoverColor {
+  0% {
+    background-color: #002855;
+  }
+  100% {
+    background-color: #0353A4;
+  }
+}
+
+@keyframes hoverColor {
+  0% {
+    background-color: #002855;
+  }
+  100% {
+    background-color: #0353A4;
+  }
+}
+
+footer {
+  width: 96%;
+  margin: 10% auto auto auto;
+  background-color: #002855;
+}
+
+footer h2 {
+  text-align: center;
+}
+
+footer .footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1%;
+}
+
+footer .footer-flex .contact {
+  border-right: 1px solid #001845;
+  width: 50%;
+}
+
+footer .footer-flex .contact .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-flex .contact i {
+  font-size: 2em;
+  margin: 1.2%;
+  text-align: center;
+  cursor: pointer;
+}
+
+footer .footer-flex .encuentranos {
+  padding: 0 1%;
+}
+
+footer .copyright p {
+  text-align: center;
+  font-style: italic;
+}
+/*# sourceMappingURL=stylePcs.css.map */

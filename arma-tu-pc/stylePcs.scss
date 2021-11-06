@@ -1,0 +1,245 @@
+//colores
+
+$true-blue:#0466C8;
+$drussian-blue:#0353A4;
+$dark-cornflower-blue:#023E7D;
+$oxford-blue:#002855;
+$oxford-dark-blue:#001845;
+$oxford-darker-blue:#001233;
+$ultra-darker-blue:#000d26;
+$grey:#5C677D;
+$white-grey:#7D8597;
+$whitr-grey: #eeeeee;
+$white:#ffffffab;
+$background:#edededb6;
+//resets
+*{
+    margin: 0;
+    padding: 0;
+}
+h2,h3,p,i{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    color: $whitr-grey;
+}
+//body
+body{
+    margin-top: 10%;
+    background-color: $background;
+}
+//mixings
+@mixin list-nav {
+    width: 35%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+@mixin li-style {
+    color: $oxford-darker-blue;
+    font-size: 1.5em;
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+}
+@mixin icon {
+    color: #000d26;
+    margin:0px 0px 0px 10px;
+}
+//font
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+//header
+nav{
+    display: flex;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: $white;
+
+    h1{
+        font-family: 'Bebas Neue', cursive;
+        margin: 0;
+        font-size: 3.5em;
+        a{
+            color: $oxford-darker-blue;
+            text-decoration: none;
+            &:hover{
+                color: $oxford-darker-blue;
+            }
+        }
+    }
+
+    ul{
+         @include list-nav;
+            
+        li{
+            @include li-style;
+            
+            .icon{
+                @include icon;
+                
+            }
+            a{
+                color: $oxford-darker-blue;
+                text-decoration: none;
+            }
+            &:hover .icon{
+    
+                color:$dark-cornflower-blue;
+            }
+
+        }
+
+        .dropdown-list{
+            position: relative;
+            
+            &:hover ul {
+                display: block;
+                animation: aparicion-menu 0.3s ;
+                @keyframes aparicion-menu {
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 100%;
+                    }
+                }
+            }
+                
+            ul{
+                position: absolute;
+                display: none;
+                left: 0px; 
+                top: 35px;
+                background-color: $dark-cornflower-blue;
+                width: 200px;
+                padding: 10px;
+                a{
+                    color:$whitr-grey;
+                    font-weight: 300;
+                    text-decoration: none;
+                    margin: 10px;
+                    font-size: 0.5em;
+                    &:hover{
+                        color: $white-grey;
+                    }
+                }
+            } 
+        }
+    }
+
+
+}
+//main
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 95%;
+    article{
+        position: relative;
+        background-color: $white;
+        margin: 1%;
+        padding: 1%;
+        width: 30%;
+        border-radius: 5px;
+        .img-ofert{
+            position: absolute;
+            width: 70px;
+            height: auto;
+            top: -20px;
+            right: -20px;
+            filter: hue-rotate(220deg);
+            
+        }
+
+        p{
+            color: $ultra-darker-blue;
+            font-weight: normal;
+            margin: 10px;
+        }
+        img{
+            width: 100%;
+            cursor: pointer;
+            height: 260px;
+            object-fit: cover;
+        }
+        button{
+            display: block;
+            margin: auto;
+            background-color: $oxford-blue;
+            border: none;
+            padding: 10px;
+            width: 170px;
+            border-radius: 4px;
+            font-size: 1.1em;
+            color: $whitr-grey;
+            font-weight: lighter;
+            &:hover{
+               animation: hoverColor 1s;
+               @keyframes hoverColor {
+                   0%{
+                       background-color: $oxford-blue;
+                   }
+
+                   100%{
+                    background-color:$drussian-blue;
+                   }
+               }
+            }
+        }
+ 
+    }
+}
+
+
+//footer
+footer{
+    width: 96%;
+    margin: 10% auto auto auto;
+    background-color: $oxford-blue;
+    h2{
+
+        text-align: center;
+    }
+    .footer-flex{
+        display: flex;
+        padding: 1%;
+
+        .contact{
+            border-right: 1px solid $oxford-dark-blue;
+            width: 50%;
+           
+            .icons{
+                display: flex;
+                justify-content: center;
+            }
+            i{
+                font-size: 2em;
+                margin: 1.2%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+
+        }
+
+        .encuentranos{
+            padding: 0 1%;
+            
+        }
+
+    }
+    .copyright{
+        p{
+            text-align: center;
+            font-style: italic;
+        }
+    }
+    
+}

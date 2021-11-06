@@ -1,0 +1,300 @@
+//colores
+
+$true-blue:#0466C8;
+$drussian-blue:#0353A4;
+$dark-cornflower-blue:#023E7D;
+$oxford-blue:#002855;
+$oxford-dark-blue:#001845;
+$oxford-darker-blue:#001233;
+$ultra-darker-blue:#000d26;
+$grey:#5C677D;
+$white-grey:#7D8597;
+$whitr-grey: #eeeeee;
+$white:#ffffffab;
+$background:#edededb6;
+//resets
+*{
+    margin: 0;
+    padding: 0;
+}
+h2,h3,p,i{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    color: $whitr-grey;
+}
+//body
+body{
+
+    background-color: $background;
+}
+//mixings
+@mixin list-nav {
+    width: 35%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+@mixin li-style {
+    color: $oxford-darker-blue;
+    font-size: 1.5em;
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+}
+@mixin icon {
+    color: #000d26;
+    margin:0px 0px 0px 10px;
+}
+//font
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+//header
+nav{
+    display: flex;
+    width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: $white;
+
+    h1{
+        font-family: 'Bebas Neue', cursive;
+        margin: 0;
+        font-size: 3.5em;
+        a{
+            color: $oxford-darker-blue;
+            text-decoration: none;
+            &:hover{
+                color: $oxford-darker-blue;
+            }
+        }
+    }
+
+    ul{
+         @include list-nav;
+            
+        li{
+            @include li-style;
+            
+            .icon{
+                @include icon;
+                
+            }
+            a{
+                color: $oxford-darker-blue;
+                text-decoration: none;
+            }
+            &:hover .icon{
+    
+                color:$dark-cornflower-blue;
+            }
+
+        }
+
+        .dropdown-list{
+            position: relative;
+            
+            &:hover ul {
+                display: block;
+                animation: aparicion-menu 0.3s ;
+                @keyframes aparicion-menu {
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 100%;
+                    }
+                }
+            }
+                
+            ul{
+                position: absolute;
+                display: none;
+                left: 0px; 
+                top: 35px;
+                background-color: $dark-cornflower-blue;
+                width: 200px;
+                padding: 10px;
+                z-index: 10;
+                a{
+                    color:$whitr-grey;
+                    font-weight: 300;
+                    text-decoration: none;
+                    margin: 10px;
+                    font-size: 0.5em;
+                    &:hover{
+                        color: $white-grey;
+                    }
+                }
+            } 
+        }
+    }
+
+
+}
+//main
+main{
+    margin-top: 5%;
+    section{
+        width: 95%;
+        margin: auto;
+        border-radius: 5px;
+        padding: 1.5%;
+        background-color: $drussian-blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .compra-descripcion{
+
+            width: 55%;
+            border-left: $oxford-blue 1px solid;
+            padding-left: 30px;
+            h3{
+                margin-top: 5%;
+            }
+            .precio-oferta{
+                text-decoration: line-through;
+                font-size: 0.9em;
+            }
+            button{
+                padding: 1%;
+                width: 150px;
+                border-radius: 5px;
+                background-color: $dark-cornflower-blue;
+                color: $whitr-grey;
+                border: none;
+                box-shadow: 0px 0px 13px 3px rgba(255, 255, 255, 0.118);
+                -webkit-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.131);
+                -moz-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.138);
+            }
+            p{
+                span{
+                    color: #00a650;
+                    font-weight: 500;
+
+                }
+            }
+        }
+        .compra-img{
+            
+                width: 35%;
+                position: relative;
+
+            .img-ofert{
+
+                position: absolute;
+                width: 80px;
+                top: -25px;
+                right: -25px;
+                height: auto;
+            }
+
+            .img-pc{
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    }
+
+}
+
+//footer
+footer{
+    width: 96%;
+    margin: 10% auto auto auto;
+    background-color: $oxford-blue;
+    h2{
+
+        text-align: center;
+    }
+    .footer-flex{
+        display: flex;
+        padding: 1%;
+
+        .contact{
+            border-right: 1px solid $oxford-dark-blue;
+            width: 50%;
+           
+            .icons{
+                display: flex;
+                justify-content: center;
+            }
+            i{
+                font-size: 2em;
+                margin: 1.2%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+
+        }
+
+        .encuentranos{
+            padding: 0 1%;
+            
+        }
+
+    }
+    .copyright{
+        p{
+            text-align: center;
+            font-style: italic;
+        }
+    }
+    
+}
+
+@media (max-width:480px) {
+    //navbar
+    nav{
+        position: relative;
+        ul{
+            position: absolute;
+            display:  none;
+            flex-direction: column;
+        }
+        .icon-menu{
+            display: block;
+        }
+    }
+    //main
+    main{
+        section{
+            flex-direction: column;
+            .compra-descripcion{
+                border: none;
+                width: 100%;
+                padding: 5%;
+                button{
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .compra-img{
+                width: 80%;
+                margin: 7% auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    //footer
+
+    footer{
+        .footer-flex{
+            flex-direction: column;
+            .contact{
+                border: none;
+                margin: 20px auto;
+            }
+            .encuentranos{
+                border-top: 1px solid $oxford-dark-blue;
+                padding: 10px;
+            }
+        }
+    }
+
+}

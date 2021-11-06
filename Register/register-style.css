@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, p, i {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: lighter;
+  color: #eeeeee;
+}
+
+body {
+  background-color: #edededb6;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  z-index: 10;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+  background-color: #ffffffab;
+}
+
+nav h1 {
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  font-size: 3.5em;
+}
+
+nav h1 a {
+  color: #001233;
+  text-decoration: none;
+}
+
+nav h1 a:hover {
+  color: #001233;
+}
+
+nav ul {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+nav ul li {
+  color: #001233;
+  font-size: 1.5em;
+  list-style: none;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+}
+
+nav ul li .icon {
+  color: #000d26;
+  margin: 0px 0px 0px 10px;
+}
+
+nav ul li a {
+  color: #001233;
+  text-decoration: none;
+}
+
+nav ul li:hover .icon {
+  color: #023E7D;
+}
+
+nav ul .dropdown-list {
+  position: relative;
+}
+
+nav ul .dropdown-list:hover ul {
+  display: block;
+  -webkit-animation: aparicion-menu 0.3s;
+          animation: aparicion-menu 0.3s;
+}
+
+@-webkit-keyframes aparicion-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes aparicion-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+nav ul .dropdown-list ul {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 35px;
+  background-color: #023E7D;
+  width: 200px;
+  padding: 10px;
+}
+
+nav ul .dropdown-list ul a {
+  color: #eeeeee;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 0.5em;
+}
+
+nav ul .dropdown-list ul a:hover {
+  color: #7D8597;
+}
+
+main h2 {
+  color: #000d26;
+  text-align: center;
+  margin: 3%;
+  font-style: italic;
+}
+
+form {
+  background-color: #0353A4;
+  width: 520px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form .columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+form button {
+  display: block;
+  margin: 20px auto;
+  padding: 1%;
+  width: 150px;
+  border-radius: 3px;
+  border: 1px solid #001845;
+  background-color: #023E7D;
+  color: #ffffffab;
+}
+
+form button:hover {
+  background-color: #001845;
+  -webkit-animation: hover-button 0.2s;
+          animation: hover-button 0.2s;
+}
+
+@-webkit-keyframes hover-button {
+  0% {
+    background-color: #023E7D;
+  }
+  100% {
+    background-color: #001845;
+  }
+}
+
+@keyframes hover-button {
+  0% {
+    background-color: #023E7D;
+  }
+  100% {
+    background-color: #001845;
+  }
+}
+
+form h3 {
+  text-align: center;
+  font-size: 2.2em;
+}
+
+form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+form label input {
+  padding: 8px;
+  border-radius: 3px;
+  border: none;
+}
+
+form a {
+  color: #001845;
+  font-weight: bold;
+}
+
+form a:hover {
+  color: #000d26;
+}
+
+footer {
+  width: 96%;
+  margin: 10% auto auto auto;
+  background-color: #002855;
+}
+
+footer h2 {
+  text-align: center;
+}
+
+footer .footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1%;
+}
+
+footer .footer-flex .contact {
+  border-right: 1px solid #001845;
+  width: 50%;
+}
+
+footer .footer-flex .contact .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-flex .contact i {
+  font-size: 2em;
+  margin: 1.2%;
+  text-align: center;
+  cursor: pointer;
+}
+
+footer .footer-flex .encuentranos {
+  padding: 0 1%;
+}
+
+footer .copyright p {
+  text-align: center;
+  font-style: italic;
+}
+/*# sourceMappingURL=register-style.css.map */

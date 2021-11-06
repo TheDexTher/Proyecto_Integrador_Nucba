@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, p, i {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: lighter;
+  color: #eeeeee;
+}
+
+body {
+  background-color: #edededb6;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  z-index: 10;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+  background-color: #ffffffab;
+}
+
+nav h1 {
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  font-size: 3.5em;
+}
+
+nav h1 a {
+  color: #001233;
+  text-decoration: none;
+}
+
+nav h1 a:hover {
+  color: #001233;
+}
+
+nav ul {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+nav ul li {
+  color: #001233;
+  font-size: 1.5em;
+  list-style: none;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: normal;
+}
+
+nav ul li .icon {
+  color: #000d26;
+  margin: 0px 0px 0px 10px;
+}
+
+nav ul li a {
+  color: #001233;
+  text-decoration: none;
+}
+
+nav ul li:hover .icon {
+  color: #023E7D;
+}
+
+nav ul .dropdown-list {
+  position: relative;
+}
+
+nav ul .dropdown-list:hover ul {
+  display: block;
+  -webkit-animation: aparicion-menu 0.3s;
+          animation: aparicion-menu 0.3s;
+}
+
+@-webkit-keyframes aparicion-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes aparicion-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+nav ul .dropdown-list ul {
+  position: absolute;
+  display: none;
+  left: 0px;
+  top: 35px;
+  background-color: #023E7D;
+  width: 200px;
+  padding: 10px;
+  z-index: 10;
+}
+
+nav ul .dropdown-list ul a {
+  color: #eeeeee;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 0.5em;
+}
+
+nav ul .dropdown-list ul a:hover {
+  color: #7D8597;
+}
+
+main {
+  margin-top: 5%;
+}
+
+main section {
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+  padding: 1.5%;
+  background-color: #0353A4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main section .compra-descripcion {
+  width: 55%;
+  border-left: #002855 1px solid;
+  padding-left: 30px;
+}
+
+main section .compra-descripcion h3 {
+  margin-top: 5%;
+}
+
+main section .compra-descripcion .precio-oferta {
+  text-decoration: line-through;
+  font-size: 0.9em;
+}
+
+main section .compra-descripcion button {
+  padding: 1%;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #023E7D;
+  color: #eeeeee;
+  border: none;
+  box-shadow: 0px 0px 13px 3px rgba(255, 255, 255, 0.118);
+  -webkit-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.131);
+  -moz-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.138);
+}
+
+main section .compra-descripcion p span {
+  color: #00a650;
+  font-weight: 500;
+}
+
+main section .compra-img {
+  width: 35%;
+  position: relative;
+}
+
+main section .compra-img .img-ofert {
+  position: absolute;
+  width: 80px;
+  top: -25px;
+  right: -25px;
+  height: auto;
+}
+
+main section .compra-img .img-pc {
+  width: 100%;
+  border-radius: 5px;
+}
+
+footer {
+  width: 96%;
+  margin: 10% auto auto auto;
+  background-color: #002855;
+}
+
+footer h2 {
+  text-align: center;
+}
+
+footer .footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1%;
+}
+
+footer .footer-flex .contact {
+  border-right: 1px solid #001845;
+  width: 50%;
+}
+
+footer .footer-flex .contact .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-flex .contact i {
+  font-size: 2em;
+  margin: 1.2%;
+  text-align: center;
+  cursor: pointer;
+}
+
+footer .footer-flex .encuentranos {
+  padding: 0 1%;
+}
+
+footer .copyright p {
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  nav {
+    position: relative;
+  }
+  nav ul {
+    position: absolute;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .icon-menu {
+    display: block;
+  }
+  main section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section .compra-descripcion {
+    border: none;
+    width: 100%;
+    padding: 5%;
+  }
+  main section .compra-descripcion button {
+    display: block;
+    margin: auto;
+  }
+  main section .compra-img {
+    width: 80%;
+    margin: 7% auto;
+  }
+  main section .compra-img img {
+    width: 100%;
+  }
+  footer .footer-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-flex .contact {
+    border: none;
+    margin: 20px auto;
+  }
+  footer .footer-flex .encuentranos {
+    border-top: 1px solid #001845;
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=comprapc-style.css.map */

@@ -1,0 +1,243 @@
+//colores
+
+$true-blue:#0466C8;
+$drussian-blue:#0353A4;
+$dark-cornflower-blue:#023E7D;
+$oxford-blue:#002855;
+$oxford-dark-blue:#001845;
+$oxford-darker-blue:#001233;
+$ultra-darker-blue:#000d26;
+$grey:#5C677D;
+$white-grey:#7D8597;
+$whitr-grey: #eeeeee;
+$white:#ffffffab;
+$background:#edededb6;
+//resets
+*{
+    margin: 0;
+    padding: 0;
+}
+h2,h3,p,i{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    color: $whitr-grey;
+}
+//body
+body{
+    background-color: $background;
+}
+//mixings
+@mixin list-nav {
+    width: 35%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+@mixin li-style {
+    color: $oxford-darker-blue;
+    font-size: 1.5em;
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+}
+@mixin icon {
+    color: #000d26;
+    margin:0px 0px 0px 10px;
+}
+//font
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+//header
+nav{
+    display: flex;
+
+    width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: $white;
+
+    h1{
+        font-family: 'Bebas Neue', cursive;
+        margin: 0;
+        font-size: 3.5em;
+        a{
+            color: $oxford-darker-blue;
+            text-decoration: none;
+            &:hover{
+                color: $oxford-darker-blue;
+            }
+        }
+    }
+
+    ul{
+         @include list-nav;
+            
+        li{
+            @include li-style;
+            
+            .icon{
+                @include icon;
+                
+            }
+            a{
+                color: $oxford-darker-blue;
+                text-decoration: none;
+            }
+            &:hover .icon{
+    
+                color:$dark-cornflower-blue;
+            }
+
+        }
+
+        .dropdown-list{
+            position: relative;
+            
+            &:hover ul {
+                display: block;
+                animation: aparicion-menu 0.3s ;
+                @keyframes aparicion-menu {
+                    0%{
+                        opacity: 0;
+                    }
+                    100%{
+                        opacity: 100%;
+                    }
+                }
+            }
+                
+            ul{
+                position: absolute;
+                display: none;
+                left: 0px; 
+                top: 35px;
+                background-color: $dark-cornflower-blue;
+                width: 200px;
+                padding: 10px;
+                a{
+                    color:$whitr-grey;
+                    font-weight: 300;
+                    text-decoration: none;
+                    margin: 10px;
+                    font-size: 0.5em;
+                    &:hover{
+                        color: $white-grey;
+                    }
+                }
+            } 
+        }
+    }
+
+
+}
+//main /registro
+main{
+    h2{
+        color: $ultra-darker-blue;
+        text-align: center;
+        margin: 3%;
+        font-style: italic;
+    }
+}
+
+//registro
+form{
+    background-color: $drussian-blue;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px ;
+
+    button{
+        display: block;
+        margin: 20px auto;
+        padding: 8px;
+        width: 150px;
+        border-radius: 3px;
+        border: 1px solid $oxford-dark-blue;
+        background-color:$dark-cornflower-blue;
+        color: $white;
+        &:hover{
+            background-color: $oxford-dark-blue;
+            animation: hover-button 0.2s;
+            @keyframes hover-button {
+                0%{
+                    background-color: $dark-cornflower-blue;
+                }
+                100%{
+                    background-color: $oxford-dark-blue;
+                }
+            }
+        }
+    }
+    h3{
+        text-align: center;
+        font-size: 2.3em;
+    }
+    label{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        input{
+            padding: 8px;
+            border-radius: 3px;
+            border: none;
+        }
+        
+    }
+    a{
+        color: $oxford-dark-blue;
+        font-weight: bold;
+        &:hover{
+            color: $ultra-darker-blue;
+        }
+    }
+}
+
+//footer
+footer{
+    width: 96%;
+    margin: 10% auto auto auto;
+    background-color: $oxford-blue;
+    h2{
+
+        text-align: center;
+    }
+    .footer-flex{
+        display: flex;
+        padding: 1%;
+
+        .contact{
+            border-right: 1px solid $oxford-dark-blue;
+            width: 50%;
+           
+            .icons{
+                display: flex;
+                justify-content: center;
+            }
+            i{
+                font-size: 2em;
+                margin: 1.2%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+
+        }
+
+        .encuentranos{
+            padding: 0 1%;
+            
+        }
+
+    }
+    .copyright{
+        p{
+            text-align: center;
+            font-style: italic;
+        }
+    }
+    
+}

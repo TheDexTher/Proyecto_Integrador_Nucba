@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../assets/hovers.css">
+        <!-- animatecss -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!-- FontAwesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" media="all">
         <!-- Bootstrap -->
@@ -16,15 +18,29 @@
 <body>
     <header>
         <nav>
+            <!-- Icon responsive -->
+            <i class="fas fa-list-ul icon-mobile">
+                <ul class="responsive-menu responsive-menu-left">
+                    <li >
+                        <a href="">
+                            Productos
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="../arma-tu-pc/pcs.html">
+                              Encontra tu Equipo
+                        </a>
+                    </li>
+                </ul>
+
+            </i>
+            <!-- Menu Izq -->
                 <ul>
-                    <li class="dropdown-list" ><i class="icon fas fa-list-ul"></i> Productos
-                        <ul>
-                            <li> <a href=""> Procesadores</a></li>
-                            <li> <a href=""> Tarjetas Graficas</a></li>
-                            <li> <a href=""> Gabinetes</a></li>
-                            <li> <a href=""> Memorias Ram</a></li>
-                            <li> <a href=""> Almacenamiento</a></li>
-                        </ul>
+                    <li><i class="icon fas fa-list-ul"></i> 
+                        <a href="">
+                            Productos
+                        </a>
                     </li>
                     <li>
                         <a href="../arma-tu-pc/pcs.html">
@@ -38,7 +54,7 @@
                         PC FACTORY
                     </a>
                 </h1>
-
+            <!-- Menu der -->
                 <ul >
                     <li>
                         <a href="../Register/register.html">
@@ -50,15 +66,29 @@
                             <i class="icon fas fa-sign-in-alt"></i>  Login
                         </a>
                     </li>
-                </ul>    
-
+                </ul> 
+            <!-- Icon Responsive -->
+                <i class="fas fa-sign-in-alt icon-mobile">
+                    <ul class="responsive-menu responsive-menu-right">
+                        <li>
+                            <a href="../Register/register.html">
+                                <i class="icon fas fa-sign-out-alt"></i>  Sign in
+                            </a>
+                        </li>
+                        <li>
+                            <a class="login" href="../login/login.html">
+                                <i class="icon fas fa-sign-in-alt"></i>  Login
+                            </a>
+                        </li>
+                    </ul> 
+                </i>
         </nav>
     </header>
     <main>
         <h2>Consigue armar la pc de tus sueños con nuestra ayuda</h2>
-        <form>
+        <form class="animate__animated animate__fadeInRight">
             <h3>Registre su cuenta</h3>
-            <div class="columns">
+            <div class="columns ">
                 <div class="column1">
                     <label>
                         <input type="text" name="" id="" placeholder="Nombre" required>
@@ -94,7 +124,7 @@
         </form>
     </main>
 
-     <footer>
+    <footer>
         <div class="footer-flex">
             
 
@@ -118,6 +148,14 @@
               
                 
                 <p>Para ir a retirar tu compra nos vas a encontrar en la calle Libertad 240, Monserrat, Buenos Aires <a href="https://www.google.com/maps/place/Libertad+240,+C1012+AAF,+Buenos+Aires/@-34.6029948,-58.4022305,14z/data=!4m13!1m7!3m6!1s0x95bccacfdd1fa037:0xf1b1f26b0eab3053!2sAv.+9+de+Julio,+Buenos+Aires!3b1!8m2!3d-34.6055778!4d-58.3817203!3m4!1s0x95bccac579a91ec9:0x2cf8c0909abcef4!8m2!3d-34.6057616!4d-58.3836664">Ver aqui</a></p>
+            </div>
+
+            <div class="llamanos">
+                <h2>Contactanos</h2>
+                <p>
+                    Para cualquier consulta contactarse a <a href="mailto:pcfactory@gmail.com">pcfactory@gmail.com</a>
+                </p>
+
             </div>
         </div>
 

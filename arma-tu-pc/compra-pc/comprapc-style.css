@@ -27,6 +27,12 @@ nav {
   background-color: #ffffffab;
 }
 
+nav .icon-mobile {
+  color: #000d26;
+  margin: 0px 0px 0px 10px;
+  display: none;
+}
+
 nav h1 {
   font-family: 'Bebas Neue', cursive;
   margin: 0;
@@ -190,6 +196,8 @@ main section .compra-img {
 }
 
 main section .compra-img .img-ofert {
+  -webkit-filter: hue-rotate(220deg);
+          filter: hue-rotate(220deg);
   position: absolute;
   width: 80px;
   top: -25px;
@@ -200,6 +208,9 @@ main section .compra-img .img-ofert {
 main section .compra-img .img-pc {
   width: 100%;
   border-radius: 5px;
+  max-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
@@ -250,19 +261,72 @@ footer .copyright p {
 }
 
 @media (max-width: 480px) {
-  nav {
-    position: relative;
+  header nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  nav ul {
-    position: absolute;
+  header nav h1 {
+    font-size: 2.5em;
+  }
+  header nav ul {
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
-  nav .icon-menu {
+  header nav .icon-mobile {
+    position: relative;
     display: block;
+    font-size: 2em;
+    margin: 0 10px;
+  }
+  header nav .icon-mobile:hover .responsive-menu-right {
+    top: 44px;
+    left: -90vw;
+  }
+  header nav .icon-mobile:hover .responsive-menu-left {
+    top: 44px;
+    left: -4vw;
+  }
+  header nav .icon-mobile:hover .responsive-menu {
+    width: 104vw;
+    padding: 10px;
+    background-color: #023E7D;
+    position: absolute;
+    display: block;
+    -webkit-animation: aparicion-menu 0.3s;
+            animation: aparicion-menu 0.3s;
+  }
+  @-webkit-keyframes aparicion-menu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  @keyframes aparicion-menu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  header nav .icon-mobile:hover .responsive-menu li {
+    color: #eeeeee;
+    margin: 10px 0;
+    font-size: 0.7em;
+  }
+  header nav .icon-mobile:hover .responsive-menu li a {
+    color: #eeeeee;
+  }
+  header nav .icon-mobile:hover .responsive-menu .dropdown-list ul {
+    width: 101vw;
+    top: 25px;
+    left: -3vw;
+    background-color: #002855;
+  }
+  header nav .icon-mobile:hover .responsive-menu .dropdown-list li {
+    font-size: 1.4em;
   }
   main section {
     -webkit-box-orient: vertical;
@@ -299,6 +363,147 @@ footer .copyright p {
   footer .footer-flex .encuentranos {
     border-top: 1px solid #001845;
     padding: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  header nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav h1 {
+    font-size: 2.5em;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav .icon-mobile {
+    position: relative;
+    display: block;
+    font-size: 2em;
+    margin: 0 10px;
+  }
+  header nav .icon-mobile:hover .responsive-menu-right {
+    top: 50px;
+    left: -92vw;
+  }
+  header nav .icon-mobile:hover .responsive-menu-left {
+    top: 50px;
+    left: -3vw;
+  }
+  header nav .icon-mobile:hover .responsive-menu {
+    width: 100vw;
+    padding: 10px;
+    background-color: #023E7D;
+    position: absolute;
+    display: block;
+    -webkit-animation: aparicion-menu 0.3s;
+            animation: aparicion-menu 0.3s;
+  }
+  @-webkit-keyframes aparicion-menu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  @keyframes aparicion-menu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  header nav .icon-mobile:hover .responsive-menu li {
+    color: #eeeeee;
+    margin: 10px 0;
+    font-size: 0.7em;
+  }
+  header nav .icon-mobile:hover .responsive-menu li a {
+    color: #eeeeee;
+  }
+  header nav .icon-mobile:hover .responsive-menu .dropdown-list ul {
+    width: 101vw;
+    top: 25px;
+    left: -3vw;
+    background-color: #002855;
+  }
+  header nav .icon-mobile:hover .responsive-menu .dropdown-list li {
+    font-size: 1.4em;
+  }
+  main section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section .compra-descripcion {
+    border: none;
+    width: 100%;
+    padding: 5%;
+  }
+  main section .compra-descripcion button {
+    display: block;
+    margin: auto;
+  }
+  main section .compra-img {
+    width: 80%;
+    margin: 7% auto;
+  }
+  main section .compra-img img {
+    width: 100%;
+  }
+  footer .footer-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-flex .contact {
+    border: none;
+    width: 95%;
+    margin: 10px 0;
+  }
+  footer .footer-flex .encuentranos {
+    width: 95%;
+    margin: 10px 0;
+    border-top: 1px solid #001845;
+  }
+  footer .footer-flex .llamanos {
+    width: 95%;
+    border-left: none;
+    border-top: 1px solid #001845;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  nav h1 {
+    font-size: 2em;
+  }
+  nav ul {
+    width: 40%;
+  }
+  nav ul li {
+    font-size: 1em;
+  }
+  nav ul .dropdown-list a {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1920px) {
+  nav h1 {
+    font-size: 4em;
+  }
+  nav ul li {
+    font-size: 1.4em;
   }
 }
 /*# sourceMappingURL=comprapc-style.css.map */

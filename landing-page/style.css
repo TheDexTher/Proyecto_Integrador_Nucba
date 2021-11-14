@@ -88,56 +88,6 @@ nav ul li:hover .icon {
   color: #023E7D;
 }
 
-nav ul .dropdown-list {
-  position: relative;
-}
-
-nav ul .dropdown-list:hover ul {
-  display: block;
-  -webkit-animation: aparicion-menu 0.3s;
-          animation: aparicion-menu 0.3s;
-}
-
-@-webkit-keyframes aparicion-menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-@keyframes aparicion-menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
-
-nav ul .dropdown-list ul {
-  position: absolute;
-  display: none;
-  left: 0px;
-  top: 35px;
-  background-color: #023E7D;
-  width: 200px;
-  padding: 10px;
-}
-
-nav ul .dropdown-list ul a {
-  color: #eeeeee;
-  font-weight: 300;
-  text-decoration: none;
-  margin: 10px;
-  font-size: 0.5em;
-}
-
-nav ul .dropdown-list ul a:hover {
-  color: #7D8597;
-}
-
 main .carousel img {
   width: 90%;
   -o-object-fit: cover;
@@ -343,15 +293,8 @@ footer .copyright p {
   header nav .icon-mobile:hover .responsive-menu li a {
     color: #eeeeee;
   }
-  header nav .icon-mobile:hover .responsive-menu .dropdown-list ul {
-    top: -10px;
-    left: -5px;
-    background-color: #002855;
-  }
-  header nav .icon-mobile:hover .responsive-menu .dropdown-list li {
-    font-size: 1.4em;
-  }
   main section .carousel img {
+    width: 100%;
     height: 130px;
   }
   main section .categories-shop {
@@ -408,11 +351,54 @@ footer .copyright p {
     display: none;
   }
   header nav .icon-mobile {
+    position: relative;
     display: block;
     font-size: 2em;
     margin: 0 10px;
   }
+  header nav .icon-mobile:hover .responsive-menu-right {
+    top: 50px;
+    left: -93vw;
+  }
+  header nav .icon-mobile:hover .responsive-menu-left {
+    top: 50px;
+    left: -3vw;
+  }
+  header nav .icon-mobile:hover .responsive-menu {
+    width: 100vw;
+    padding: 10px;
+    background-color: #023E7D;
+    position: absolute;
+    display: block;
+    -webkit-animation: aparicion-menu 0.3s;
+            animation: aparicion-menu 0.3s;
+  }
+  @-webkit-keyframes aparicion-menu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  @keyframes aparicion-menu {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  header nav .icon-mobile:hover .responsive-menu li {
+    color: #eeeeee;
+    margin: 10px 0;
+    font-size: 0.7em;
+  }
+  header nav .icon-mobile:hover .responsive-menu li a {
+    color: #eeeeee;
+  }
   main section .carousel img {
+    width: 100%;
     height: 220px;
   }
   main section .categories-shop {
@@ -428,31 +414,6 @@ footer .copyright p {
   main section .categories-shop article img {
     width: 100%;
   }
-  footer .footer-flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .footer-flex .contact {
-    border: none;
-    width: 95%;
-    margin: 10px 0;
-  }
-  footer .footer-flex .encuentranos {
-    width: 95%;
-    margin: 10px 0;
-    border-top: 1px solid #001845;
-  }
-  footer .footer-flex .llamanos {
-    width: 95%;
-    border-left: none;
-    border-top: 1px solid #001845;
-    margin: 10px 0;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 1280px) {
@@ -465,14 +426,20 @@ footer .copyright p {
   nav ul li {
     font-size: 1em;
   }
-  nav ul .dropdown-list a {
-    font-size: 1em;
-  }
   main section .carousel img {
     height: 330px;
   }
   main section .categories-shop article img {
     height: 230px;
+  }
+}
+
+@media (min-width: 1920px) {
+  nav h1 {
+    font-size: 4em;
+  }
+  nav ul li {
+    font-size: 1.4em;
   }
 }
 /*# sourceMappingURL=style.css.map */

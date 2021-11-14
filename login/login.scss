@@ -36,7 +36,6 @@ body{
 }
 @mixin li-style {
     color: $oxford-darker-blue;
-    font-size: 1.5em;
     list-style: none;
     cursor: pointer;
     font-family: 'Nunito Sans', sans-serif;
@@ -58,6 +57,11 @@ nav{
     padding: 1%;
     background-color: $white;
 
+    .icon-mobile{
+        @include icon;
+        display: none;
+    }
+
     h1{
         font-family: 'Bebas Neue', cursive;
         margin: 0;
@@ -75,6 +79,7 @@ nav{
          @include list-nav;
             
         li{
+            font-size: 1.4em;
             @include li-style;
             
             .icon{
@@ -240,4 +245,262 @@ footer{
         }
     }
     
+}
+
+//mediaquerys
+//celulares
+@media (max-width: 480px) {
+
+    //navbar
+
+    header{
+        nav{
+            align-items: center;
+            h1{
+                font-size: 2.5em;
+            }
+            ul{
+                display: none;
+
+            }
+
+            //responsive menu
+
+            .icon-mobile{
+                position: relative;
+                display: block;
+                font-size: 2em;
+                margin: 0 10px;
+                &:hover{
+                    .responsive-menu-right{
+                        top: 50px;
+                        left: -90vw;
+                    }
+                    .responsive-menu-left{
+                        top: 50px;
+                        left: -4vw;
+                    }
+                    .responsive-menu{
+                        width: 104vw;
+                        padding: 10px;
+                        background-color: $dark-cornflower-blue;
+                        position: absolute;
+                        display: block;
+                        animation: aparicion-menu 0.3s ;
+
+                        @keyframes aparicion-menu {
+                        0%{
+                            opacity: 0;
+                            }
+                            
+                        100%{
+                            opacity: 100%;
+                            }
+
+                        }
+                        
+                        li{
+                            color: $whitr-grey;
+                            margin: 10px 0;
+                            font-size: 0.7em;
+                            a{
+                                color: $whitr-grey;
+                            }
+                        }
+                        .dropdown-list{
+                            ul{
+                                width: 101vw;
+                                top: 25px;
+                                left: -3vw;
+                                background-color: $oxford-blue;
+                            }
+                            li{
+                                font-size: 1.4em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    //main
+
+    form{
+        width: 95%;
+    }
+
+    //footer
+
+    footer{
+        .footer-flex{
+            flex-direction: column;
+            align-items: center;
+            .contact{
+                border: none;
+                width: 95%;
+                margin: 10px 0;
+            }
+            .encuentranos{
+                width: 95%;
+                margin: 10px 0;
+                border-top: 1px solid $oxford-dark-blue;
+            }
+            .llamanos{
+                width: 95%;
+                border-left: none;
+                border-top: 1px solid $oxford-dark-blue;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+//tablets
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    //navbar
+    header{
+        nav{
+            align-items: center;
+            h1{
+                font-size: 2.5em;
+            }
+            ul{
+                display: none;
+
+            }
+
+            //responsive menu (queria hacer que lo heredara del anterior mediaquery, pero no encontre como)
+
+            .icon-mobile{
+                position: relative;
+                display: block;
+                font-size: 2em;
+                margin: 0 10px;
+                &:hover{
+                    .responsive-menu-right{
+                        top: 50px;
+                        left: -87.5vw;
+                    }
+                    .responsive-menu-left{
+                        top: 50px;
+                        left: -3vw;
+                    }
+                    .responsive-menu{
+                        width: 100vw;
+                        padding: 10px;
+                        background-color: $dark-cornflower-blue;
+                        position: absolute;
+                        display: block;
+                        animation: aparicion-menu 0.3s ;
+
+                        @keyframes aparicion-menu {
+                        0%{
+                            opacity: 0;
+                            }
+                            
+                        100%{
+                            opacity: 100%;
+                            }
+
+                        }
+                        
+                        li{
+                            color: $whitr-grey;
+                            margin: 10px 0;
+                            font-size: 0.7em;
+                            a{
+                                color: $whitr-grey;
+                            }
+                        }
+                        .dropdown-list{
+                            ul{
+                                width: 101vw;
+                                top: 25px;
+                                left: -3vw;
+                                background-color: $oxford-blue;
+                            }
+                            li{
+                                font-size: 1.4em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    //form
+    form{
+        width: 80%;
+    }
+
+      //footer
+
+      footer{
+        .footer-flex{
+            flex-direction: column;
+            align-items: center;
+            .contact{
+                border: none;
+                width: 95%;
+                margin: 10px 0;
+            }
+            .encuentranos{
+                width: 95%;
+                margin: 10px 0;
+                border-top: 1px solid $oxford-dark-blue;
+            }
+            .llamanos{
+                width: 95%;
+                border-left: none;
+                border-top: 1px solid $oxford-dark-blue;
+                margin: 10px 0;
+            }
+        }
+    }
+
+}
+//monitores pequeños
+@media (min-width: 769px) and (max-width: 1280px){
+    //navbar
+        nav{
+
+            h1{
+                font-size: 2em;
+            }
+            ul{
+                width: 40%;
+                li{
+                font-size: 1em;
+                }
+                .dropdown-list{
+                    a{
+                        font-size: 1em;
+                    }   
+                }
+            }
+        }
+
+}
+
+//monitores  1600 * 900 no necesitan mediaquerys
+
+//monitores 1920 en adelante
+
+@media (min-width: 1920px) {
+    nav{
+        h1{
+            font-size: 4em;
+        }
+        ul{
+            li{
+                font-size: 1.4em;
+
+            }
+        }
+    }
 }

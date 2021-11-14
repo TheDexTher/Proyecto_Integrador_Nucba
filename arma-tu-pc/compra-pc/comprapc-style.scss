@@ -57,6 +57,11 @@ nav{
     justify-content: space-between;
     padding: 1%;
     background-color: $white;
+    
+    .icon-mobile{
+        @include icon;
+        display: none;
+    }
 
     h1{
         font-family: 'Bebas Neue', cursive;
@@ -177,12 +182,12 @@ main{
             }
         }
         .compra-img{
-            
                 width: 35%;
                 position: relative;
 
-            .img-ofert{
 
+            .img-ofert{
+                filter: hue-rotate(220deg);
                 position: absolute;
                 width: 80px;
                 top: -25px;
@@ -193,6 +198,8 @@ main{
             .img-pc{
                 width: 100%;
                 border-radius: 5px;
+                max-height: 350px;
+                object-fit: cover;
             }
         }
     }
@@ -247,17 +254,79 @@ footer{
 
 @media (max-width:480px) {
     //navbar
-    nav{
-        position: relative;
-        ul{
-            position: absolute;
-            display:  none;
-            flex-direction: column;
+
+    header{
+        nav{
+            align-items: center;
+            h1{
+                font-size: 2.5em;
+            }
+            ul{
+                display: none;
+
+            }
+
+            //responsive menu
+
+            .icon-mobile{
+                position: relative;
+                display: block;
+                font-size: 2em;
+                margin: 0 10px;
+                &:hover{
+                    .responsive-menu-right{
+                        top: 44px;
+                        left: -90vw;
+                    }
+                    .responsive-menu-left{
+                        top: 44px;
+                        left: -4vw;
+                    }
+                    .responsive-menu{
+                        width: 104vw;
+                        padding: 10px;
+                        background-color: $dark-cornflower-blue;
+                        position: absolute;
+                        display: block;
+                        animation: aparicion-menu 0.3s ;
+
+                        @keyframes aparicion-menu {
+                        0%{
+                            opacity: 0;
+                            }
+                            
+                        100%{
+                            opacity: 100%;
+                            }
+
+                        }
+                        
+                        li{
+                            color: $whitr-grey;
+                            margin: 10px 0;
+                            font-size: 0.7em;
+                            a{
+                                color: $whitr-grey;
+                            }
+                        }
+                        .dropdown-list{
+                            ul{
+                                width: 101vw;
+                                top: 25px;
+                                left: -3vw;
+                                background-color: $oxford-blue;
+                            }
+                            li{
+                                font-size: 1.4em;
+                            }
+                        }
+                    }
+                }
+            }
         }
-        .icon-menu{
-            display: block;
-        }
+
     }
+
     //main
     main{
         section{
@@ -297,4 +366,173 @@ footer{
         }
     }
 
+}
+
+//tablets
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    //navbar
+    header{
+        nav{
+            align-items: center;
+            h1{
+                font-size: 2.5em;
+            }
+            ul{
+                display: none;
+
+            }
+
+            //responsive menu (queria hacer que lo heredara del anterior mediaquery, pero no encontre como)
+
+            .icon-mobile{
+                position: relative;
+                display: block;
+                font-size: 2em;
+                margin: 0 10px;
+                &:hover{
+                    .responsive-menu-right{
+                        top: 50px;
+                        left: -92vw;
+                    }
+                    .responsive-menu-left{
+                        top: 50px;
+                        left: -3vw;
+                    }
+                    .responsive-menu{
+                        width: 100vw;
+                        padding: 10px;
+                        background-color: $dark-cornflower-blue;
+                        position: absolute;
+                        display: block;
+                        animation: aparicion-menu 0.3s ;
+
+                        @keyframes aparicion-menu {
+                        0%{
+                            opacity: 0;
+                            }
+                            
+                        100%{
+                            opacity: 100%;
+                            }
+
+                        }
+                        
+                        li{
+                            color: $whitr-grey;
+                            margin: 10px 0;
+                            font-size: 0.7em;
+                            a{
+                                color: $whitr-grey;
+                            }
+                        }
+                        .dropdown-list{
+                            ul{
+                                width: 101vw;
+                                top: 25px;
+                                left: -3vw;
+                                background-color: $oxford-blue;
+                            }
+                            li{
+                                font-size: 1.4em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+     //main
+     main{
+        section{
+            flex-direction: column;
+            .compra-descripcion{
+                border: none;
+                width: 100%;
+                padding: 5%;
+                button{
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .compra-img{
+                width: 80%;
+                margin: 7% auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+ 
+
+      //footer
+
+      footer{
+        .footer-flex{
+            flex-direction: column;
+            align-items: center;
+            .contact{
+                border: none;
+                width: 95%;
+                margin: 10px 0;
+            }
+            .encuentranos{
+                width: 95%;
+                margin: 10px 0;
+                border-top: 1px solid $oxford-dark-blue;
+            }
+            .llamanos{
+                width: 95%;
+                border-left: none;
+                border-top: 1px solid $oxford-dark-blue;
+                margin: 10px 0;
+            }
+        }
+    }
+
+}
+//monitores pequeños
+@media (min-width: 769px) and (max-width: 1280px){
+    //navbar
+
+        nav{
+
+            h1{
+                font-size: 2em;
+            }
+            ul{
+                width: 40%;
+                li{
+                font-size: 1em;
+                }
+                .dropdown-list{
+                    a{
+                        font-size: 1em;
+                    }   
+                }
+            }
+        }
+
+}
+
+//monitores  1600 * 900 no necesitan mediaquerys
+
+//monitores 1920 en adelante
+
+@media (min-width: 1920px) {
+    nav{
+        h1{
+            font-size: 4em;
+        }
+        ul{
+            li{
+                font-size: 1.4em;
+
+            }
+        }
+    }
 }

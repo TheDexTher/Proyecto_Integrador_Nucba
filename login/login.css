@@ -234,7 +234,7 @@ footer .footer-flex {
 
 footer .footer-flex .contact {
   border-right: 1px solid #001845;
-  width: 50%;
+  width: 33%;
 }
 
 footer .footer-flex .contact .icons {
@@ -254,7 +254,14 @@ footer .footer-flex .contact i {
 }
 
 footer .footer-flex .encuentranos {
+  width: 33%;
   padding: 0 1%;
+}
+
+footer .footer-flex .llamanos {
+  width: 33%;
+  padding: 0 1%;
+  border-left: 1px solid #001845;
 }
 
 footer .copyright p {

@@ -303,10 +303,13 @@ footer{
     //main{
     main{
         section{
+            margin: 0;
             .carousel{
+                
                 img{
                     width: 100%;
-                    height: 130px;
+                    height: 160px;
+                    object-fit: contain;
                 }
             }
             .categories-shop{
@@ -316,7 +319,7 @@ footer{
                     width: 100%;
                     img{
                         width: 100%;
-                        height: 230px;
+
                     }
                 }
     

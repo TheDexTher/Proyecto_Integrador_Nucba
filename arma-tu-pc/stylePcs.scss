@@ -225,7 +225,7 @@ footer{
 
         .contact{
             border-right: 1px solid $oxford-dark-blue;
-            width: 50%;
+            width: 33%;
            
             .icons{
                 display: flex;
@@ -242,8 +242,15 @@ footer{
         }
 
         .encuentranos{
+            width: 33%;
             padding: 0 1%;
             
+        }
+
+        .llamanos{
+            width: 33%;
+            padding: 0 1%;
+            border-left: 1px solid $oxford-dark-blue;
         }
 
     }
@@ -454,7 +461,8 @@ footer{
         section{
             width: 100%;
             article{
-                width: 48%;
+                margin: auto;
+                width: 68%;
                 padding: 20px;
                 margin-top: 10%;
             }

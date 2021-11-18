@@ -136,16 +136,33 @@ nav ul .dropdown-list ul a:hover {
   color: #7D8597;
 }
 
-main {
-  margin-top: 5%;
+main .regreso-pcs {
+  text-decoration: none;
+}
+
+main .regreso-pcs p {
+  border: 2px solid #002855;
+  padding: .5%;
+  border-radius: 3px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #000d26;
+  font-weight: normal;
+  font-size: 1.3em;
+  margin: 1%;
+}
+
+main .regreso-pcs p:hover {
+  color: #002855;
 }
 
 main section {
-  width: 95%;
-  margin: auto;
+  background-color: white;
+  width: 80%;
+  margin: 5% auto;
   border-radius: 5px;
   padding: 1.5%;
-  background-color: #0353A4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,30 +176,51 @@ main section {
 }
 
 main section .compra-descripcion {
-  width: 55%;
+  width: 32%;
   border-left: #002855 1px solid;
   padding-left: 30px;
 }
 
 main section .compra-descripcion h3 {
-  margin-top: 5%;
+  color: #000d26;
+  font-weight: normal;
+  margin: 5% 0;
+  font-size: 1.6em;
 }
 
 main section .compra-descripcion .precio-oferta {
+  margin-top: 20px;
   text-decoration: line-through;
   font-size: 0.9em;
 }
 
-main section .compra-descripcion button {
-  padding: 1%;
-  width: 150px;
-  border-radius: 5px;
-  background-color: #023E7D;
-  color: #eeeeee;
+main section .compra-descripcion .amount {
+  padding: 3px;
   border: none;
+  border-bottom: 1px solid black;
+  margin: 10px 0 20px 0;
+}
+
+main section .compra-descripcion button {
+  color: #eeeeee;
+  display: block;
+  margin: auto;
+  background-color: #002855;
+  border: none;
+  padding: 10px;
+  width: 170px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: lighter;
   box-shadow: 0px 0px 13px 3px rgba(255, 255, 255, 0.118);
   -webkit-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.131);
   -moz-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.138);
+}
+
+main section .compra-descripcion p {
+  color: #000d26;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
 main section .compra-descripcion p span {
@@ -191,11 +229,18 @@ main section .compra-descripcion p span {
 }
 
 main section .compra-img {
-  width: 35%;
+  width: 50%;
   position: relative;
 }
 
+main section .compra-img .carousel-item img {
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 main section .compra-img .img-ofert {
+  display: none;
   -webkit-filter: hue-rotate(220deg);
           filter: hue-rotate(220deg);
   position: absolute;
@@ -232,7 +277,7 @@ footer .footer-flex {
 
 footer .footer-flex .contact {
   border-right: 1px solid #001845;
-  width: 50%;
+  width: 33%;
 }
 
 footer .footer-flex .contact .icons {
@@ -252,7 +297,14 @@ footer .footer-flex .contact i {
 }
 
 footer .footer-flex .encuentranos {
+  width: 33%;
   padding: 0 1%;
+}
+
+footer .footer-flex .llamanos {
+  width: 33%;
+  padding: 0 1%;
+  border-left: 1px solid #001845;
 }
 
 footer .copyright p {
@@ -347,8 +399,9 @@ footer .copyright p {
     width: 80%;
     margin: 7% auto;
   }
-  main section .compra-img img {
+  main section .compra-img .carousel-item img {
     width: 100%;
+    height: 250px;
   }
   footer .footer-flex {
     -webkit-box-orient: vertical;

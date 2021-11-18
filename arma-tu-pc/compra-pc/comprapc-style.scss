@@ -47,6 +47,10 @@ body{
     color: #000d26;
     margin:0px 0px 0px 10px;
 }
+@mixin font-compra{
+    color: $ultra-darker-blue;
+    font-weight: normal;
+}
 //font
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 //header
@@ -140,40 +144,70 @@ nav{
 }
 //main
 main{
-    margin-top: 5%;
+    .regreso-pcs{
+
+        text-decoration: none;
+        p{
+            border: 2px solid $oxford-blue;
+            padding: .5%;
+            border-radius: 3px;
+            width: max-content;
+            @include font-compra;
+            font-size: 1.3em;
+            margin:1%;
+            &:hover{
+                color: $oxford-blue;
+            }
+        } 
+    }
     section{
-        width: 95%;
-        margin: auto;
+        background-color: white;
+        width: 80%;
+        margin: 5% auto;
         border-radius: 5px;
         padding: 1.5%;
-        background-color: $drussian-blue;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         .compra-descripcion{
 
-            width: 55%;
+            width: 32%;
             border-left: $oxford-blue 1px solid;
             padding-left: 30px;
             h3{
-                margin-top: 5%;
+                @include font-compra;
+                margin: 5% 0;
+                font-size: 1.6em;
             }
             .precio-oferta{
+                margin-top: 20px;
                 text-decoration: line-through;
                 font-size: 0.9em;
             }
-            button{
-                padding: 1%;
-                width: 150px;
-                border-radius: 5px;
-                background-color: $dark-cornflower-blue;
-                color: $whitr-grey;
+            .amount{
+                padding: 3px;
                 border: none;
+                border-bottom: 1px solid black;
+                margin: 10px 0 20px 0;
+            }
+            button{
+                color: $whitr-grey;
+                display: block;
+                margin: auto;
+                background-color: $oxford-blue;
+                border: none;
+                padding: 10px;
+                width: 170px;
+                border-radius: 4px;
+                font-size: 1.1em;
+                font-weight: lighter;
                 box-shadow: 0px 0px 13px 3px rgba(255, 255, 255, 0.118);
                 -webkit-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.131);
                 -moz-box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.138);
             }
             p{
+                @include font-compra;
+                margin-bottom: 10px;
                 span{
                     color: #00a650;
                     font-weight: 500;
@@ -182,11 +216,18 @@ main{
             }
         }
         .compra-img{
-                width: 35%;
+                width: 50%;
                 position: relative;
 
+            .carousel-item{
 
+                img{
+                    height: 500px;
+                    object-fit: contain;
+                }
+            }
             .img-ofert{
+                display: none;
                 filter: hue-rotate(220deg);
                 position: absolute;
                 width: 80px;
@@ -221,7 +262,7 @@ footer{
 
         .contact{
             border-right: 1px solid $oxford-dark-blue;
-            width: 50%;
+            width: 33%;
            
             .icons{
                 display: flex;
@@ -238,10 +279,16 @@ footer{
         }
 
         .encuentranos{
+            width: 33%;
             padding: 0 1%;
             
         }
 
+        .llamanos{
+            width: 33%;
+            padding: 0 1%;
+            border-left: 1px solid $oxford-dark-blue;
+        }
     }
     .copyright{
         p{
@@ -343,8 +390,9 @@ footer{
             .compra-img{
                 width: 80%;
                 margin: 7% auto;
-                img{
+                .carousel-item img{
                     width: 100%;
+                    height: 250px;
                 }
             }
         }

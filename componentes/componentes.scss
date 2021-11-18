@@ -225,7 +225,7 @@ footer{
 
         .contact{
             border-right: 1px solid $oxford-dark-blue;
-            width: 50%;
+            width: 33%;
            
             .icons{
                 display: flex;
@@ -242,8 +242,15 @@ footer{
         }
 
         .encuentranos{
+            width: 33%;
             padding: 0 1%;
             
+        }
+
+        .llamanos{
+            width: 33%;
+            padding: 0 1%;
+            border-left: 1px solid $oxford-dark-blue;
         }
 
     }
@@ -352,22 +359,35 @@ footer{
         .footer-flex{
             flex-direction: column;
             align-items: center;
-            .contact{
-                border: none;
-                width: 95%;
-                margin: 10px 0;
+      .contact{
+            border-right: 1px solid $oxford-dark-blue;
+            width: 33%;
+           
+            .icons{
+                display: flex;
+                justify-content: center;
             }
-            .encuentranos{
-                width: 95%;
-                margin: 10px 0;
-                border-top: 1px solid $oxford-dark-blue;
+            i{
+                font-size: 2em;
+                margin: 1.2%;
+                text-align: center;
+                cursor: pointer;
             }
-            .llamanos{
-                width: 95%;
-                border-left: none;
-                border-top: 1px solid $oxford-dark-blue;
-                margin: 10px 0;
-            }
+
+
+        }
+
+        .encuentranos{
+            width: 33%;
+            padding: 0 1%;
+            
+        }
+
+        .llamanos{
+            width: 33%;
+            padding: 0 1%;
+            border-left: 1px solid $oxford-dark-blue;
+        }
         }
     }
 }

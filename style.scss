@@ -24,6 +24,7 @@ h2,h3,p,i{
 }
 //body
 body{
+    position: relative;
     margin-top: 10%;
     background-color: $background;
 }
@@ -104,6 +105,22 @@ nav{
 
 
 }
+//contact
+
+    .contactanos{
+        z-index: 10;
+        display: block;
+        position:  fixed;
+        width: 60px;
+        bottom: 10vh;
+        right: 5vw;
+        background-color: #e2e2e2;
+        padding:10px;
+        border-radius: 20px;
+        box-sizing: content-box;
+    }
+
+
 //main
 main{
          
@@ -300,7 +317,12 @@ footer{
         }
 
     }
-    //main{
+    //contactanos link
+    .contactanos{
+        bottom: 3vh;
+        right: 3vh;
+    }
+    //main
     main{
         section{
             margin: 0;
@@ -417,6 +439,7 @@ footer{
         }
 
     }
+
     //main
     main{
         section{

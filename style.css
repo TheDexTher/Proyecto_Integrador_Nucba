@@ -11,6 +11,7 @@ h2, h3, p, i {
 }
 
 body {
+  position: relative;
   margin-top: 10%;
   background-color: #edededb6;
 }
@@ -86,6 +87,20 @@ nav ul li a {
 
 nav ul li:hover .icon {
   color: #023E7D;
+}
+
+.contactanos {
+  z-index: 10;
+  display: block;
+  position: fixed;
+  width: 60px;
+  bottom: 10vh;
+  right: 5vw;
+  background-color: #e2e2e2;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 main .carousel img {
@@ -292,6 +307,10 @@ footer .copyright p {
   }
   header nav .icon-mobile:hover .responsive-menu li a {
     color: #eeeeee;
+  }
+  .contactanos {
+    bottom: 3vh;
+    right: 3vh;
   }
   main section {
     margin: 0;

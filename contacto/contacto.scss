@@ -1,0 +1,74 @@
+////colores
+
+$true-blue:#0466C8;
+$drussian-blue:#0353A4;
+$dark-cornflower-blue:#023E7D;
+$oxford-blue:#002855;
+$oxford-dark-blue:#001845;
+$oxford-darker-blue:#001233;
+$ultra-darker-blue:#000d26;
+$grey:#5C677D;
+$white-grey:#7D8597;
+$whitr-grey: #eeeeee;
+$white:#ffffffab;
+$background:#edededb6;
+//resets
+*{
+    margin: 0;
+    padding: 0;
+}
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+//formulario
+
+.formulario-contacto{
+    width: 50%;
+    margin: 1% auto;
+    h2{
+        color: $ultra-darker-blue;
+        font-weight: normal;
+        font-size: 2.4em;
+        margin-bottom: 20px;
+    }
+    .user-contact{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        label{
+            width: 48%;
+            display: block;
+            input{
+                width: 100%;
+                padding: 10px;
+                border: 1px solid $ultra-darker-blue;
+            }
+        }
+    }
+    .mensaje{
+
+        textarea{
+            display: block;
+            height: 300px;
+            width: 100%;
+            resize: none;
+            padding: 10px;
+            margin: 1% auto;
+            border: 1px solid $ultra-darker-blue;
+        }
+    }
+    button{
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2em;
+        border: 1px solid $ultra-darker-blue;
+        background-color: white;
+        &:hover{
+            background-color: $oxford-dark-blue;
+            color: $whitr-grey;
+        }
+    }
+
+    
+}

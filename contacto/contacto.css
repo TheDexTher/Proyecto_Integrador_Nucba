@@ -59,4 +59,14 @@
   background-color: #001845;
   color: #eeeeee;
 }
+
+@media (max-width: 1024px) {
+  .formulario-contacto {
+    width: 90%;
+  }
+  .formulario-contacto h2 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=contacto.css.map */
